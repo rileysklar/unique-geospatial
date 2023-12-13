@@ -62,7 +62,16 @@ h6 {
 }
 h1 {
   font-size: 2.852em;
+  text-wrap: balance;
+  text-align: center;
 }
+
+@media screen and (max-width: 50em) {
+  h1 {
+    font-size: 1.852em;
+  }
+}
+
 h2 {
   font-size: 2.441em;
 }
