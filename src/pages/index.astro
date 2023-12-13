@@ -7,9 +7,16 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
+  <meta property="og:title" content="Unique Geospatial" />
+  <meta
+    property="og:description"
+    content="Specializing in providing cutting-edge geospatial
+solutions for a variety of industries"
+  />
+  <meta property="og:image" content="ugs-services.png" />
+
+  <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+
   <body>
     <Header title={SITE_TITLE} />
     <main>
