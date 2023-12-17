@@ -171,3 +171,21 @@ hr {
   width: 50%;
   padding-bottom: 2em;
 }
+
+.tag-bubble {
+  display: flex;
+  flex-direction: row;
+  gap: 0.25em;
+  overflow-wrap: break-word;
+  flex-wrap: wrap;
+  text-wrap: balance;
+}
+
+.tagGIS {
+  background-color: rgb(var(--gray-light));
+  border-radius: 100em;
+  padding: 0.1em 1em;
+  padding-top: 0.2em;
+  font-size: 0.75em;
+  color: rgb(var(--gray-dark));
+}
