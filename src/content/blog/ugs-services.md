@@ -1,6 +1,6 @@
 ---
 title: "Unlock the Full Potential of Geospatial Technology with Unique Geospatial Services"
-description: "Discover the potential of your solar, wind, and storage initiatives through our expert analysis. We evaluate interconnection routes, pinpoint substation locations, and identify buildable areas based on your parameters. Our comprehensive approach provides detailed figures and web applications for impactful meetings and development workshops."
+description: "Discover the potential of your solar, wind, and storage initiatives through our expert analysis. We evaluate interconnection routes, pinpoint substation locations, and identify buildable areas based on your parameters."
 pubDate: "Dec 13 2023"
 heroImage: "/ugs-services.jpg"
 ---
