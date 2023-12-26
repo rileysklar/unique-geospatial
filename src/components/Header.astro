@@ -1,6 +1,7 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
+import ThemeToggle from "./ThemeToggle.astro";
 ---
 
 <header>
@@ -26,7 +27,14 @@ import { SITE_TITLE } from "../consts";
             d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
           ></path></svg
         >
-      </a>
+      </a><div class="theme-toggle">
+        <ThemeToggle />
+      </div>
+
+      <script>
+        console.log();
+      </script>
+
       <!-- <a href="https://twitter.com/astrodotbuild" target="_blank">
         <span class="sr-only">Follow Astro on Twitter</span>
         <svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
@@ -52,7 +60,7 @@ import { SITE_TITLE } from "../consts";
   header {
     margin: 0;
     padding: 0 1em;
-    background: rgba(23, 23, 23, 0.7);
+    background: var(--gray-gradient);
     backdrop-filter: blur(5px);
     border-bottom: solid 1px #30303040;
     box-shadow: 0 2px 8px rgba(var(--black), 5%);
@@ -62,6 +70,7 @@ import { SITE_TITLE } from "../consts";
   h2 {
     margin: 0;
     font-size: 1em;
+    max-width: 33%;
   }
 
   h2 a,
@@ -87,6 +96,7 @@ import { SITE_TITLE } from "../consts";
   .social-links a {
     display: flex;
     fill: rgb(var(--gray-light));
+    border-bottom: none;
   }
   @media (max-width: 720px) {
     .social-links {

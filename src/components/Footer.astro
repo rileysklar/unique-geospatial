@@ -1,5 +1,6 @@
 ---
 const today = new Date();
+import ThemeToggle from "./ThemeToggle.astro";
 ---
 
 <footer>
@@ -9,6 +10,9 @@ const today = new Date();
     > & <a href="https://andrewriefenstahl.com">Andrew</a> in Austin, Texas.
   </div>
   <div class="social-links">
+    <div class="theme-toggle">
+      <ThemeToggle />
+    </div>
     <a
       href="https://www.linkedin.com/in/lincoln-kauffman-2b6308b4/"
       target="_blank"
@@ -58,9 +62,12 @@ const today = new Date();
     gap: 1em;
     margin-top: 1em;
   }
+
   .social-links a {
     text-decoration: none;
     fill: rgb(var(--gray-light));
+    display: flex;
+    align-items: center;
   }
   .social-links a:hover {
     color: rgb(var(--gray-dark));
