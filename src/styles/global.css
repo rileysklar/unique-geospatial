@@ -14,6 +14,7 @@
   --gray-gradient: rgba(var(--gray-light), 50%), #fff;
   --box-shadow: 0 2px 6px rgba(var(--gray), 25%),
     0 8px 24px rgba(var(--gray), 33%), 0 16px 32px rgba(var(--gray), 33%);
+  --topo-background: url("/topo-lightgit add .svg");
 
   /* Transitions */
   --theme-transition: 0.5s ease-in-out;
@@ -40,9 +41,7 @@
   --gray-gradient: rgba(var(--gray-light), 50%), #fff;
   --box-shadow: 0 2px 6px rgba(var(--gray), 25%),
     0 8px 24px rgba(var(--gray), 33%), 0 16px 32px rgba(var(--gray), 33%);
-  body {
-    background-image: url(/topo-dark.svg);
-  }
+  --topo-background: url("/topo-dark.svg");
 }
 
 @font-face {
@@ -67,7 +66,7 @@ body {
   text-align: left;
   /* background: linear-gradient(var(--gray-gradient)) no-repeat; */
   background-color: rgb(var(--gray-dark));
-  background-image: url(/topo-light.svg);
+  background-image: var(--topo-background);
   background-size: cover;
   word-wrap: break-word;
   overflow-wrap: break-word;
