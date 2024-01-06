@@ -75,6 +75,7 @@ import Icon from "./Icon.astro";
       super();
 
       const button = this.querySelector("button")!;
+      const localStorageKey = "theme";
 
       /** Set the theme to dark/light mode. */
       const setTheme = (dark: boolean) => {
@@ -82,18 +83,31 @@ import Icon from "./Icon.astro";
           "theme-dark"
         );
         button.setAttribute("aria-pressed", String(dark));
+
+        // Save the theme preference to local storage.
+        localStorage.setItem(localStorageKey, String(dark));
       };
+
+      // Check if there is a theme preference in local storage.
+      const savedThemePreference = localStorage.getItem(localStorageKey);
+
+      // Determine the initial theme based on local storage or device's media preference.
+      const initialTheme =
+        savedThemePreference !== null
+          ? savedThemePreference === "true"
+          : window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      // Set the initial theme.
+      setTheme(initialTheme);
 
       // Toggle the theme when a user clicks the button.
       button.addEventListener("click", () => setTheme(!this.isDark()));
-
-      // Initialize button state to reflect current theme.
-      setTheme(this.isDark());
     }
 
     isDark() {
       return document.documentElement.classList.contains("theme-dark");
     }
   }
+
   customElements.define("theme-toggle", ThemeToggle);
 </script>
