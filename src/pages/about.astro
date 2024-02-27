@@ -1,5 +1,61 @@
 ---
 import Layout from "../layouts/BlogPost.astro";
+import { Accordion } from "../components/Accordion";
+
+const faqs = [
+  {
+    title: "Solar, Wind, and Storage Prospecting",
+    text: "Discover the potential of your energy projects with our expert analysis. We analyze interconnection routes, substation locations, and buildable areas based on your parameters, providing detailed figures and web apps for meetings and development workshops.",
+  },
+  {
+    title: "Due Diligence and Advisory Services",
+    text: "Ensure a solid foundation for your projects with our comprehensive due diligence services. We review site control, verify legal descriptions, and conduct fatal flaw analyses, integrating findings into informative cartographic outputs.",
+  },
+  {
+    title: "Constraints and Permitting Analysis",
+    text: "Navigate the complexities of permitting with our in-depth geospatial data mining. We identify site-specific constraints, perform holistic analyses, and produce high-quality, informative cartographic outputs.",
+  },
+  {
+    title: "Decommissioning and Demolition Support",
+    text: "Streamline the decommissioning process with our GIS and data management support. From preserving infrastructure locations to providing field surveyor training, we ensure a smooth transition.",
+  },
+  {
+    title: "Remote Sensing",
+    text: "Harness the power of remote sensing to gather valuable information without physical contact. Our expertise in interpreting and analyzing data from various sensors allows us to provide actionable insights for environmental monitoring, agriculture, and beyond.",
+  },
+  {
+    title: "Drone Survey and Mapping",
+    text: "Take your projects to new heights with our drone survey and mapping services. We leverage cutting-edge UAV technology to capture high-resolution imagery and create accurate 3D maps. From construction sites to expansive landscapes, our drone solutions provide a detailed perspective for informed decision-making.",
+  },
+  {
+    title: "Digital Twins",
+    text: "Step into the future of project visualization with digital twins. We create precise digital replicas of physical assets, allowing for real-time monitoring, simulation, and analysis. Digital twins enhance project management, improve efficiency, and facilitate better communication across all stages of development.",
+  },
+  {
+    title: "LiDAR (Light Detection and Ranging)",
+    text: "Experience the precision of LiDAR technology for detailed mapping and topographical analysis. Our LiDAR services enable high-resolution elevation modeling, accurate terrain mapping, and enhanced environmental assessments. Stay ahead with the latest in geospatial technology.",
+  },
+  {
+    title: "Spatial Analysis and Modeling",
+    text: "Drive data-driven decisions with our advanced spatial analysis and modeling services. Whether you need to analyze terrain characteristics, optimize route planning, or simulate environmental impacts, our experts utilize GIS tools to provide insights that go beyond the surface.",
+  },
+  {
+    title: "Custom Web-Based Mapping Applications",
+    text: "Empower your team with intuitive and tailored web-based mapping applications. Our custom solutions enhance collaboration, streamline data access, and provide a user-friendly interface for your specific project requirements.",
+  },
+  {
+    title: "Data Acquisition and Management",
+    text: "Ensure the integrity and accessibility of your geospatial data with our comprehensive data acquisition and management services. From sourcing relevant datasets to designing efficient data workflows, we optimize your data infrastructure for seamless project execution.",
+  },
+  {
+    title: "Environmental Review and Permitting",
+    text: "Navigate regulatory landscapes confidently with our environmental review and permitting expertise. We analyze complex geospatial data to identify potential environmental impacts, helping you meet regulatory requirements and obtain necessary permits.",
+  },
+  {
+    title: "Energy Sector Solutions",
+    text: "Tailored solutions for the energy sector, including solar, wind, and storage prospecting. Our geospatial analysis aids in route planning, substation location determination, and constraint identification for efficient and sustainable energy projects.",
+  },
+];
 ---
 
 <Layout
@@ -35,7 +91,8 @@ solutions for a variety of industries"
     solutions, fostering sustainable development and informed decision-making.
 
     <h3>Services</h3>
-    <ul>
+    <Accordion data={faqs} />
+    <!-- <ul>
       <li>
         <span class="services-title">Solar, Wind, and Storage Prospecting:</span
         > Discover the potential of your energy projects with our expert analysis.
@@ -136,7 +193,7 @@ solutions for a variety of industries"
         geospatial analysis aids in route planning, substation location determination,
         and constraint identification for efficient and sustainable energy projects.
       </li>
-    </ul>
+    </ul> -->
   </div>
 </Layout>
 <style>

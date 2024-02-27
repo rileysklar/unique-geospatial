@@ -1,0 +1,67 @@
+.accordion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  color: var(--gray-100);
+}
+
+.accordion-item {
+  padding: 1em;
+  cursor: pointer;
+  border-top: 4px solid var(--gray-999);
+  border-bottom: 4px solid var(--gray-999);
+  border-radius: 1em;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 24px;
+  row-gap: 32px;
+  align-items: center;
+  background-color: var(--gray-900);
+}
+
+.accordion-number {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--gray-600);
+}
+
+.accordion-title {
+  font-size: 1.2em;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.accordion-icon {
+  font-size: 2.5em;
+  font-weight: 500;
+}
+
+.content-box {
+  grid-column: 2 / -1;
+  padding-bottom: 16px;
+  line-height: 1.6;
+  font-size: 1.2em;
+}
+
+.content-box ul {
+  color: var(--gray-700);
+  margin-left: 16px;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* OPEN STATE */
+.open {
+  border-top: 4px solid var(--accent-regular); /* Updated */
+}
+
+.open .number,
+.open .title {
+  color: var(--accent-regular); /* Updated */
+}
+
+@media (min-width: 50em) {
+}
